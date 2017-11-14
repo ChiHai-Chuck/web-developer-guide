@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+.ScrollUp {
+    width: 31px;
+    height: 96px;
+    right: 0;
+    border-right: 0 !important;
+    box-shadow: 0 0 8px -1px #555;
+    background: url(../../images/ScrollUpMin.png) no-repeat center;
+}
+
+header {
+    height: 120px;
+}
+header > * {
+    left: 30px;
+}
+header > h1 {
+    top: 0;
+    bottom: 40px;
+}
+header > p {
+    top: 40px;
+    bottom: 0;
+}
+
+.docbox > h2 {
+    height: 100px;
+    padding-left: 30px;
+    font-size: 30px;
+    line-height: 100px;
+}
+.docbox h3 {
+    font-size: 24px;
+}
+i {
+    margin: 0 15px 15px;
+    font-size: 16px;
+}
+
+dl.item-list {
+    width: 100%;
+    font-size: 16px;
+    line-height: 30px;
+    border-bottom: 1px solid gray;
+}
+dl.item-list-last { border: 0; }
+
+.section {
+    padding: 30px;
+}
+
+.section > p {
+    font-size: 16px;
+}
+
+div.code-title { display: block; }
+.section-code{
+    float: left;
+}
+.section-code-doc {
+    padding: 20px;
+}
+.section-code-doc + div {
+    position: relative;
+    padding: 50px 20px 20px;
+    border-top: 1px solid gray;
+    font-size: 16px;
+}
+.section p ,
+.section-code-doc p {
+    line-height: 30px;
+    font-size: 16px;
+}
+.section ul ,
+.section ol ,
+.section-code-doc ul ,
+.section-code-doc ol {
+    font-size: 16px;
+}
+.section ul li ,
+.section ol li ,
+.section-code-doc ul li ,
+.section-code-doc ol li {
+    line-height: 25px;
+}

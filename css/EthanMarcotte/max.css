@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+.ScrollUp {
+    width: 48px;
+    height: 48px;
+    right: 40px;
+    background: url(../../images/ScrollUp.png) no-repeat center;
+}
+
+header {
+    height: 60px;
+}
+header > * {
+    top: 0;
+    bottom: 0;
+}
+header > h1 {
+    left: 30px;
+}
+header:hover p {
+    opacity: 0;
+}
+header p {
+    right: 30px;
+    text-align: right;
+    -webkit-transition-property: opacity;
+       -moz-transition-property: opacity;
+         -o-transition-property: opacity;
+            transition-property: opacity;
+}
+
+.docbox > h2 {
+    height: 150px;
+    padding-left: 50px;
+    font-size: 50px;
+    line-height: 150px;
+}
+.docbox h3 {
+    font-size: 34px;
+}
+i {
+    margin: 0 20px 20px;
+    font-size: 20px;
+}
+
+dl.item-list {
+    width: 25%;
+    font-size: 24px;
+    line-height: 40px;
+    float: left;
+}
+
+.section {
+    padding: 50px;
+}
+.section-code {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+.section > p {
+    font-size: 20px;
+}
+
+div.code-title { display: none; }
+.section-code{
+    display: table;
+    table-layout: fixed;
+}
+.section-code-doc,
+.section-code-doc + div {
+    display: table-cell;
+    padding: 30px;
+}
+.section-code-doc + div {
+    font-size: 18px;
+}
+.section p ,
+.section-code-doc p {
+    line-height: 35px;
+    font-size: 20px;
+}
+.section ul ,
+.section ol ,
+.section-code-doc ul ,
+.section-code-doc ol {
+    font-size: 20px;
+}
+.section ul li ,
+.section ol li ,
+.section-code-doc ul li ,
+.section-code-doc ol li {
+    line-height: 35px;
+}

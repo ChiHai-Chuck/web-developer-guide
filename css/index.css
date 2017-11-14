@@ -1,0 +1,226 @@
+@charset "utf-8";
+@import url(EthanMarcotte/min.css) screen and (max-width:799px);
+@import url(EthanMarcotte/max.css) screen and (min-width:800px);
+
+body {
+    padding-bottom: 30px;
+    color: gray;
+}
+a { color: gray; }
+h1, h2, h3, h4, h5, h6 { cursor: default; }
+
+.ScrollUp {
+    bottom: 40px;
+    border: 2px solid darkgray;
+}
+
+header,
+header > * {
+    -webkit-transition: none 0.3s ease;
+       -moz-transition: none 0.3s ease;
+         -o-transition: none 0.3s ease;
+            transition: none 0.3s ease;
+}
+header {
+    position: relative;
+    background-color: #AAA;
+    -webkit-transition-property: height;
+       -moz-transition-property: height;
+         -o-transition-property: height;
+            transition-property: height;
+}
+
+header:hover {
+    height: 150px;
+}
+header > * {
+    position: absolute;
+    margin: auto;
+    height: 1em;
+    line-height: 1em;
+}
+
+header h1 {
+    font-size: 36px;
+}
+header p {
+    font-size: 14px;
+    color: snow;
+    text-shadow: 1px 1px 0 #333, 1px 1px 4px rgba(255,255,255,.8);
+    cursor: default;
+}
+
+header * ,
+h1, h2, h3, h4, h5, h6 ,
+ul *, ol * ,
+div.ScrollUp ,
+dl.item-list * ,
+span.code-small ,
+.section-code-doc + div p {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.ScrollUp {
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.docbox > h2 {
+    width: 100%;
+    float: left;
+    background-color: lightgray;
+    border-top:1px solid gray;
+}
+.docbox h3 {
+    margin-bottom: 10px;
+}
+
+i { display: inline-block; }
+span.code-small {
+    margin: 0 3px;
+    padding: 3px;
+    border-radius: 5px;
+    color: lightsalmon;
+    background-color: #EEE;
+    cursor: default;
+}
+span.italic {
+    display: inline-block;
+    font-style: italic;
+    margin: 0 6px 0 0;
+}
+
+div.code-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+    font-size: 22px;
+    border-bottom: 1px solid darkgray;
+    background-color: rgba(100,100,100,.1);
+    cursor: default;
+}
+div.code-title > span {
+    float: right;
+    color: darkgray;
+}
+
+dl.item-list {
+    padding: 30px;
+    clear: both;
+}
+dl.item-list dt { font-weight: bold; }
+dl.item-list dd {
+    margin-left: 40px;
+}
+dl.item-list dt,
+dl.item-list dd {
+    cursor: pointer;
+}
+dl.item-list dt:hover,
+dl.item-list dd:hover {
+    text-decoration: underline;
+}
+
+.section { float: left; }
+.section,
+.section-code {
+    width: 100%;
+    border-top: 1px solid gray;
+}
+
+.section-code {
+    width: 100%;
+}
+.section-code-doc + div {
+    background-color: #EEE;
+}
+.section-code-doc + div p {
+    border-bottom: 2px solid;
+    font-weight: bold;
+    cursor: default;
+}
+.section-code-doc p,
+.section p {
+    margin-bottom: 1em;
+}
+.section-code-doc ul,
+.section-code-doc ol,
+.section ul,
+.section ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.section-code-doc ul li,
+.section-code-doc ol li,
+.section ul li,
+.section ol li {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.section-code-doc ul li,
+.section ul li {
+    list-style: disc;
+    word-wrap: break-word;
+}
+.section-code-doc ol li,
+.section ol li {
+    list-style: decimal;
+}
+.section-code-doc a,
+.section a {
+    color: #08C;
+}
+.section-code-doc a:hover,
+.section a:hover {
+    text-decoration: underline;
+}
+
+
+.letter {
+    display: inline-block;
+    color: black;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+.letter:before,
+.letter:after {
+    position: absolute;
+    content: attr(data-letter);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+}
+.letter,
+.letter:before,
+.letter:after {
+    transition: all .3s ease-in-out;
+    cursor: default;
+}
+.letter:after {
+    color: rgba(0,0,0,.11);
+    transform: scale(1.08,1) rotateX(0) rotateY(0) rotateZ(0) skew(0,1deg);
+    z-index: 2;
+}
+.letter:before {
+    color: white;
+    text-shadow: -1px 0 1px rgba(255,255,255,.8), 1px 0 1px rgba(0,0,0,.8);
+    transform: rotateX(0) rotateY(-15deg) rotateZ(0);
+    z-index: 3;
+}
+.letter:hover:after {
+    transform: scale(1.08,1) rotateX(0) rotateY(40deg) rotateZ(0) skew(0,22deg);
+}
+.letter:hover:before {
+    color: #FAFAFA;
+    transform: rotateX(0) rotateY(-40deg) rotateZ(0);
+}
