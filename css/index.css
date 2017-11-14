@@ -115,7 +115,6 @@ div.code-title > span {
 
 dl.item-list {
     padding: 30px;
-    clear: both;
 }
 dl.item-list dt { font-weight: bold; }
 dl.item-list dd {
